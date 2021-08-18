@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/19fc5ef744.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="(max-width: 500px)" href="css/style.mobile.css"/>
     <title>Agence Ledor</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
             </div>
         </section>
 
-        <!--Offres-->
+        <!--Offers-->
         <section id="offer" class="offer space-container">
           <h2 class="title">Nos dernieres offres</h2>
           <ul class="offer-list">
@@ -47,7 +48,7 @@
                 <p>3 900 000 € - $4 200 000</p>
               </div>
             </li>
-            <li class="offer-elem  space-lr">
+            <li class="offer-elem space-lr">
               <img
                 src="images/house-2.jpg"
                 alt="house-2"
@@ -149,7 +150,26 @@
         </section>
 
         <!-- Contact -->
-
+        <section class="contact bg-dark">
+          <form action="#" class="contact-form">
+            <h2 class="title">Pour nous <strong>contacter</strong></h2>
+            <input type="text" placeholder="Nom" name="name" id="name" />
+            <input type="email" placeholder="Email" name="email" id="email" />
+            <input
+              type="text"
+              placeholder="Votre message ..."
+              name="message"
+              id="message"
+            />
+            <div>
+              <button>Soumettre</button>
+            </div>
+          </form>
+        </section>
+        
+        <footer>
+          <p>Copyright © 2021 Dyma, Inc.</p>
+        </footer>
     </div>
 </body>
 </html>
