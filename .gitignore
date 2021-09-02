@@ -1,3 +1,4 @@
 .DS_Store
 **/.vscode
-docs
+Documentation
+lex.yy.c
