@@ -43,9 +43,9 @@
 
         header {
             background-color: #eb2f06;
-            grid-column: 1 / span 4;
+            grid-column: 1 / span 4; /*grid-area: 1 / 1 / 2 / span 4*/
 
-            
+            /*grid-area: 1 / 1 / 2 / auto*/
         }
 
         main {
@@ -57,7 +57,6 @@
         aside {
             background-color: #fa983a;
             grid-column: 4 / span 1;
-
         }
 
         footer {
@@ -67,7 +66,20 @@
         }
 
         @media only screen and (max-width: 512px) {
-            
+            .container {
+                grid-template-rows: repeat(4, 1fr);
+            }
+
+            main {
+                background-color: #1e3799;
+                grid-column: 1 / span 4;
+            }
+
+            aside {
+                background-color: #fa983a;
+                grid-column: 1 / span 4;
+                grid-row: 2 / 3;
+            }
         }
 
 
