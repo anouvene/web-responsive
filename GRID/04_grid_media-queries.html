@@ -4,25 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css?family=Anton"
+    rel="stylesheet"
+    type="text/css"
+  />
     <title>GRID - Media queries</title>
     <style>
         * {
             box-sizing: border-box;
         }
 
-        .container {
-
+        html, body {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, 'Anton', Arial Narrow Bold, sans-serif;
         }
 
-        header {
+        h3 {
+            font-size: 2rem;
+            color: whitesmoke;
+        }
 
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-auto-flow: row;
+        }
+
+        header, main, aside, footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        header {
+            background-color: #eb2f06;
+            grid-column: 1 / span 4;
+
+            
         }
 
         main {
+            background-color: #1e3799;
+            grid-column: 1 / span 2;
+
+        }
+
+        aside {
+            background-color: #fa983a;
+            grid-column: 4 / span 1;
 
         }
 
         footer {
+            background-color: #079992;
+            grid-column: 1 / span 4;
 
         }
 
@@ -35,10 +75,10 @@
 </head>
 <body>
     <div class="container">
-        <header>En-tëte</header>
-        <main>Zone principale</main>
-        <aside>Navigation</aside>
-        <footer>Pied de page</footer>
+        <header><h3>En-tête</h3></header>
+        <main><h3>Zone principale</h3></main>
+        <aside><h3>Navigation</h3></aside>
+        <footer><h3>Pied de page</h3></footer>
     </div>
 </body>
 </html>
