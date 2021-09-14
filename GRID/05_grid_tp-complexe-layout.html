@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css?family=Anton"
+    rel="stylesheet"
+    type="text/css"
+  />
+    <title>GRID - Complexe layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            font-family: Impact, Haettenschweiler, 'Anton', Arial Narrow Bold, sans-serif;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: whitesmoke;
+        }
+
+        .container {
+            background-color: brown;
+            display: grid;
+            min-height: 100vh;
+            /*grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 50px 50px auto 100px 50px 50px;*/
+            gap: 10px;
+
+            /*grid-template-areas: 
+                "area1 area1 area1"
+                "area2 area5 area5"
+                "area2 area6 area7"
+                "area2 area6 area8"
+                "area2 area3 area3"
+                "area4 area4 area4"
+            ;*/
+
+            grid: 
+                "area1 area1 area1" 50px 
+                "area2 area5 area5" 50px 
+                "area2 area6 area7" auto 
+                "area2 area6 area8" 100px 
+                "area2 area3 area3" 50px 
+                "area4 area4 area4" 50px 
+                / 1fr 2fr 1fr
+            ;
+
+        }
+
+        .item {
+            padding: 1rem;
+            background-color: blue;
+            color: white;
+        }
+
+        /*.item:nth-child(1) {
+            grid-column: 1 / -1;
+        }
+
+        .item:nth-child(2) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 6;
+        }
+
+        .item:nth-child(3) {
+            grid-column: 2 / -1;
+            grid-row: 5 / 6;
+        }
+
+        .item:nth-child(4) {
+            grid-column: 1 / -1;
+            grid-row: 6 / 7;
+        }
+
+        .item:nth-child(5) {
+            grid-column: 2 / -1;
+            grid-row: 2 / 3;
+        }
+
+        .item:nth-child(6) {
+            grid-column: 2 / 3;
+            grid-row: 3 / 5;
+        }
+
+        .item:nth-child(7) {
+            grid-column: 3 / -1;
+            grid-row: 3 / 4;
+        }
+
+        .item:nth-child(8) {
+            grid-column: 3 / -1;
+            grid-row: 4 / 5;
+        }
+        */
+
+        .item:nth-child(1) {
+            grid-area: area1;
+        }
+
+        .item:nth-child(2) {
+            grid-area: area2;
+        }
+
+        .item:nth-child(3) {
+            grid-area: area3;
+        }
+
+        .item:nth-child(4) {
+            grid-area: area4;
+        }
+
+        .item:nth-child(5) {
+            grid-area: area5;
+        }
+
+        .item:nth-child(6) {
+            grid-area: area6;
+        }
+
+        .item:nth-child(7) {
+            grid-area: area7;
+        }
+
+        .item:nth-child(8) {
+            grid-area: area8;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+    </div>
+</body>
+</html>
